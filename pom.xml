@@ -10,6 +10,8 @@
 		<!-- minimum hibernate dependency -->
 		<version.hibernate.core>5.2.15.Final</version.hibernate.core>
 		<version.mysql.connector>5.1.32</version.mysql.connector>
+		<!--hibernate dependency for ehcache -->
+		<version.hibernate.ehcache>5.2.16.Final</version.hibernate.ehcache>
 	</properties>
 	
 	<dependencies>
@@ -22,6 +24,12 @@
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>${version.mysql.connector}</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-ehcache -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+		    <artifactId>hibernate-ehcache</artifactId>
+		    <version>${version.hibernate.ehcache}</version>
 		</dependency>
 		
 	</dependencies>

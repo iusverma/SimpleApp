@@ -11,7 +11,17 @@
 		<property name="hibernate.connection.password">mysql-dba</property>
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
 		<property name="show_sql">true</property>
-		<property name="hbm2ddl.auto">create</property>
+		<!-- Comment to avoid recreation of db table with every run -->
+		<!-- For first run of app, uncomment it -->
+		<!-- <property name="hbm2ddl.auto">create</property> -->
+
+		<!-- Configuring Second level  -->
+		<property name="cache.use_second_level_cache">true</property>
+		<property name="cache.provider_class">org.hibernate.cache.EhCacheProvider</property>
+		<property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>
+
+		<!-- DB entity mappings -->
 		<mapping class="com.learning.hibernate.model.UserDetails" />
+		<mapping class="com.learning.hibernate.model.PersonDetails" />
 	</session-factory>
 </hibernate-configuration>
